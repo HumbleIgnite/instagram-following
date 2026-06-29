@@ -1,117 +1,74 @@
-[Instagram Following](https://apify.com/data-slayer/instagram-following?fpr=data)
+[Instagram Following](https://apify.com/iron-crawler/instagram-following?fpr=data)
 
-Extract Instagram following lists without authentication or cookies. This scraper enables social media strategists to build comprehensive audience insights and develop targeted marketing campaigns using a completely cookieless architecture.
+"# Instagram Following Scraper (No Login Required)
 
-## 📺 Video Tutorial: How it Works
+## What does Instagram Following Scraper (No Login Required) do?
 
-[Video](https://www.youtube.com/embed/ehnJAemUP1w?enablejsapi=1&rel=0)
+This tool extracts comprehensive data from Instagram following lists without requiring any login credentials or cookies. Built on a cookieless architecture, it allows you to gather valuable audience intelligence from any public Instagram profile instantly. Whether you're analyzing competitor networks, building prospect lists, or researching influencer connections, this scraper operates seamlessly without authentication barriers.
 
----
+**Key Features:**
 
-## Inputs
+- Extract following lists from any public Instagram profile
+- No login or authentication required
+- Export data in JSON, CSV, or Excel formats
+- Retrieve user IDs, usernames, full names, and verification status
+- Access profile picture URLs and follower counts
+- Filter private vs. public accounts
+- Identify mutual follower connections
+- Fast, reliable data extraction at scale
+
+## Why scrape Instagram following lists?
+
+Social media strategists want to extract Instagram following lists to build comprehensive audience insights and develop targeted marketing campaigns. Understanding who your competitors, influencers, or target accounts follow reveals valuable patterns about audience interests, industry connections, and potential collaboration opportunities. This data transforms raw follower information into actionable intelligence for growth strategies.
+
+**Primary Use Cases:**
+
+- **Lead Generation:** Identify potential customers by analyzing who follows industry leaders, competitors, or complementary brands in your niche
+- **Influencer Marketing:** Research influencer networks to find authentic partnerships, verify audience quality, and discover micro-influencers with engaged communities
+- **Competitive Intelligence:** Map competitor relationships, track their network growth patterns, and identify key accounts they engage with for strategic positioning
+
+## How to scrape Instagram following lists using this tool?
+
+**Step 1:** Locate the Instagram profile you want to analyze. Copy either the profile URL ([https://instagram.com/username](https://instagram.com/username)), the username directly, or the numeric user ID.
+
+**Step 2:** Configure your input parameters in the scraper. Enter the username (e.g., ""cristiano"") in the designated field. Note that **1 page ≈ 50 items**, so plan your extraction volume accordingly based on the target account's following count.
+
+**Step 3:** Run the scraper and wait for the extraction to complete. Once finished, download your data in your preferred format (JSON, CSV, or Excel) for analysis, CRM import, or further processing.
+
+## What are the input parameters?
 
 | Field | Type | Description |
 | --- | --- | --- |
-| username | String | Instagram username, user ID, or profile URL (e.g., `cristiano`) |
+| username | String | The Instagram username without the @ symbol (e.g., ""cristiano""). You can also use the full profile URL or numeric user ID. |
 
-## Outputs
+## What data can you extract?
 
-**Available Formats**: JSON, CSV, Excel
-
-**Extracted Fields**:
-
-- `username` - Instagram handle
-- `full_name` - Display name
-- `id` - Unique user identifier
-- `is_verified` - Verification badge status
-- `is_private` - Account privacy setting
-- `profile_pic_url` - Profile image URL
-- `latest_reel_media` - Timestamp of most recent reel
-
-## How to Use
-
-**Step 1**: Enter the target Instagram `username` (e.g., `cristiano`), user ID, or full profile URL in the input field.
-
-**Step 2**: Configure extraction depth by setting the maximum number of pages to process (**1 page ≈ 50 following accounts**).
-
-**Step 3**: Run the scraper and download your data in JSON, CSV, or Excel format once extraction completes.
-
-## Sample Output
+You can download the following data in JSON, CSV, or Excel formats:
 
 ```
-[
-  {
-    "username": "techfounder",
-    "full_name": "Sarah Chen",
-    "id": "8472639104",
-    "is_verified": true,
-    "is_private": false,
-    "profile_pic_url": "https://scontent-cdninstagram.com/v/t51.2885-19/profile_pic.jpg",
-    "latest_reel_media": 1734187293
-  },
-  {
-    "username": "digitalmarketer",
-    "full_name": "Marcus Johnson",
-    "id": "5938271046",
-    "is_verified": false,
-    "is_private": false,
-    "profile_pic_url": "https://scontent-cdninstagram.com/v/t51.2885-19/profile_pic.jpg",
-    "latest_reel_media": 1733982147
-  }
-]
+{
+  ""user_id"": ""987654321"",
+  ""username"": ""travel_wanderer"",
+  ""full_name"": ""Alex Thompson"",
+  ""is_private"": false,
+  ""is_verified"": false,
+  ""following_count"": 342,
+  ""mutual_followers"": 15,
+  ""profile_pic_url"": ""https://instagram.fcdg2-1.fna.fbcdn.net/v/t51.2885-19/123456789_123456789.jpg""
+}
 ```
 
----
+**Extracted Fields:**
 
-## Key Features
-
-🔒 **Cookieless / No Login Required** - Extract following data without Instagram credentials, eliminating account suspension risks and authentication complexity.
-
-📈 **Scalable Architecture** - Process multiple profiles and extract thousands of following relationships with enterprise-grade reliability.
-
-✅ **Rich Profile Data** - Capture username, full name, user ID, verification status, privacy settings, profile pictures, and latest reel activity timestamps.
-
-⚡ **Fast & Reliable** - Optimized extraction engine delivers consistent results with minimal latency and maximum uptime.
-
-📊 **Export-Ready Formats** - Download data instantly in JSON, CSV, or Excel formats for seamless integration with your analytics stack.
-
-## Use Cases
-
-**Social Media Marketers**: Analyze competitor following patterns to identify high-value audience segments and craft personalized outreach campaigns that resonate with target demographics.
-
-**Data Analysts**: Build comprehensive social graphs and network analysis models by mapping following relationships across multiple profiles to uncover influencer ecosystems and community structures.
-
-**Sales & Business Development Teams**: Generate qualified leads by extracting following lists from industry leaders and competitors, then enriching prospect databases with verified Instagram profiles for multi-channel engagement.
-
-## Important Considerations
-
-This scraper works exclusively with public Instagram profiles. Private accounts cannot be accessed, and following lists will only be extracted from profiles with public visibility settings.
-
-## 🧩 Other Instagram Actors by Data Slayer
-
-| Actor | What it does | Link |
-| --- | --- | --- |
-| Instagram Followers Scraper | Extract follower lists from any account | [Try it](https://apify.com/data-slayer/instagram-followers-scraper---no-login) |
-| Instagram Comments Scraper | Extract comments from any post | [Try it](https://apify.com/data-slayer/instagram-comments-scraper-no-login-required) |
-| Instagram Posts Scraper | Extract posts from any profile | [Try it](https://apify.com/data-slayer/instagram-posts) |
-| Instagram Likes Scraper | Extract users who liked any post | [Try it](https://apify.com/data-slayer/instagram-likes) |
-| Instagram Reels Scraper | Search and extract Instagram Reels | [Try it](https://apify.com/data-slayer/instagram-search-reels) |
-| Instagram Profile Scraper | Get full profile data with contact info | [Try it](https://apify.com/data-slayer/instagram-user-info-scraper-cookieless) |
-| Instagram User Search | Search Instagram users by keyword | [Try it](https://apify.com/data-slayer/instagram-search-users) |
-| Instagram Hashtag Scraper | Discover hashtags and media counts | [Try it](https://apify.com/data-slayer/instagram-hashtags-scraper-no-login-required) |
-| Instagram Location Posts | Extract posts from any location | [Try it](https://apify.com/data-slayer/instagram-location-posts) |
-
-**Need verified emails?** Our [LinkedIn Post Engagers Email Finder](https://apify.com/data-slayer/linkedin-post-to-verified-leads) and [LinkedIn Audience Email Finder](https://apify.com/data-slayer/linkedin-influencer-audience-to-verified-leads) extract verified work emails from LinkedIn engagement data.
-
-## 💬 Feedback and Support
-
-We actively maintain this actor and ship improvements based on user feedback. If you run into any issues or have ideas for new features:
-
-- Create an issue on the Actor's **Issues tab** in Apify Console
-- Rate the actor if it helped you — it helps others find it too
-
-We typically respond within 24 hours.
+- `user_id`: Unique numeric identifier for the Instagram account
+- `username`: The account's handle/username
+- `full_name`: Display name shown on the profile
+- `is_private`: Boolean indicating if the account is private
+- `is_verified`: Boolean showing verification badge status
+- `following_count`: Total number of accounts this user follows
+- `mutual_followers`: Number of followers you have in common
+- `profile_pic_url`: Direct link to the profile picture image
 
 ---
 
----
+This Instagram scraper provides powerful instagram follower extraction capabilities for professionals who need to export instagram followers data efficiently. Whether you're conducting instagram data extraction for lead generation instagram campaigns or performing instagram followers export for market analysis, this tool delivers reliable instagram followers data without authentication complexity."
